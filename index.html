@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Geocoder</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css"/>
+  </head>
+  <body>
+    <form action="#" id="adress-searchform" class="">
+      <div class="row">
+        <div class="col-10 offset-1 col-md-5 offset-md-2">
+          <div class="form-group">
+            <label for="adress" class="text-center">Where are we going?</label>
+            <input type="text" name="content" id="adress" class="form-control" placeholder="Type an adress here"></input>
+          </div>
+        </div>
+        <div id="submit-block" class="col-10 offset-1 col-md-2">
+          <input type="submit" id="adress-submit" value="Geocode" class="btn btn-primary">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 offset-1 col-md-5 offset-md-2">
+      <ul id="autocomplete-list"></ul>
+      </div>
+      </div>
+    </form>
+    <div>
+      <ul id="coordinates" class="list-inline"></ul>
+    </div>
+      <div id="map">
+        <!-- RESPONSE MAP -->
+      </div>
+
+    <script src="src/index.js" type="module"></script>
+    <script src="node_modules/mapbox-gl/dist/mapbox-gl.js"></script>
+  </body>
+</html>
